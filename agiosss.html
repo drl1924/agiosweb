@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    
-   
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AGIOS MENU</title>
     <style>
-        
-       
-
-        
         body {
-            
             margin: 0;
             padding: 0;
-            font-family
-            overflow-x: hidden;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
             background-image: url(scre); /* Εικόνα φόντου */
             background-size: cover; /* Καλύπτει ολόκληρη την οθόνη */
             background-position: center; /* Κεντρική τοποθέτηση */
             background-repeat: no-repeat; /* Αποφυγή επαναλήψεως */
-            background-i
             background-color: #f5f5f5;
             color: #333;
         }
 
         header {
             background-color: #ffffff;
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-            
             color: rgb(0, 0, 0);
             padding: 20px;
             text-align: center;
-            background-i
             z-index: 1;
+        }
+
+        header img {
+            max-width: 100%;
+            height: auto;
         }
 
         main {
@@ -45,22 +38,25 @@
         }
 
         .menu-section {
-            background-color: rgb(255, 251, 251);
+            background-color: rgba(255, 251, 251, 0.9);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 20px;
             padding: 20px;
-            width: 80%;
+            width: 100%;
             max-width: 800px;
         }
 
         .menu-section h2 {
             margin-top: 0;
             color: #4CAF50;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .menu-item {
             display: flex;
+            flex-wrap: wrap;
+            align-items: center;
             justify-content: space-between;
             border-bottom: 1px solid #ddd;
             padding: 10px 0;
@@ -71,8 +67,9 @@
         }
 
         .menu-item img {
-            width: 250px;
-            height: 250px;
+            width: 100%;
+            max-width: 150px;
+            height: auto;
             border-radius: 50%;
             margin-right: 20px;
         }
@@ -87,7 +84,7 @@
         }
 
         .menu-item-description {
-            font-size: 10px;
+            font-size: 14px;
             color: #777;
         }
 
@@ -95,29 +92,52 @@
             font-size: 16px;
             color: #4CAF50;
         }
-        h2{
-            font-family:'Times New Roman', Times, serif;
+
+        @media (max-width: 600px) {
+            .menu-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .menu-item img {
+                margin-bottom: 10px;
+            }
+
+            .menu-item-details {
+                text-align: center;
+            }
+
+            .menu-section {
+                margin: 10px;
+                padding: 10px;
+            }
+
+            .menu-item-name {
+                font-size: 16px;
+            }
+
+            .menu-item-description {
+                font-size: 12px;
+            }
+
+            .menu-item-price {
+                font-size: 14px;
+            }
         }
-        
-        
     </style>
 </head>
 <body>
-    
     <header>
-        
         <h1>ΑΝΑΨΥΚΤΗΡΙΟ ΑΓΙΟΥ ΚΩΝΣΤΑΝΤΙΝΟΥ</h1>
-      
         <img src="Screenshot (4).png" alt="">
         <img src="Screenshot (3).png" alt="">
         <img src="Screenshot (5).png" alt="">
     </header>
     <main>
-        
         <div class="menu-section">
             <h2>Κυρίως</h2>
             <div class="menu-item">
-                <img src="images2/Screenshot (3).png" alt="Appetizer 1">
+                <img src="images2/Screenshot (3).png" alt="Πίτσα">
                 <div class="menu-item-details">
                     <div class="menu-item-name">Πίτσα</div>
                     <div class="menu-item-description">Σπέσιαλ, Πεπερόνε, Μαργαρίτα,...Της επιλογής σας.</div>
@@ -125,7 +145,7 @@
                 <div class="menu-item-price">€10</div>
             </div>
             <div class="menu-item">
-                <img src="images2/Screenshot (6).png" alt="Appetizer 2">
+                <img src="images2/Screenshot (6).png" alt="Burger">
                 <div class="menu-item-details">
                     <div class="menu-item-name">Burger</div>
                     <div class="menu-item-description">Classic, Cheesburger, Your Choise.</div>
@@ -133,7 +153,7 @@
                 <div class="menu-item-price">€5</div>
             </div>
             <div class="menu-item">
-                <img src="images2/Screenshot (11).png" alt="Appetizer 1">
+                <img src="images2/Screenshot (11).png" alt="Κλαμπ">
                 <div class="menu-item-details">
                     <div class="menu-item-name">Κλαμπ</div>
                     <div class="menu-item-description">Mε υλικά του τόπου μας.</div>
@@ -141,7 +161,7 @@
                 <div class="menu-item-price">€5</div>
             </div>
             <div class="menu-item">
-                <img src="images2/κοτομπουκιεσ.jpg" alt="Appetizer 1">
+                <img src="images2/κοτομπουκιεσ.jpg" alt="Κοτομπουκιές">
                 <div class="menu-item-details">
                     <div class="menu-item-name">Κοτομπουκιές</div>
                     <div class="menu-item-description">Κλασσικές.</div>
@@ -152,15 +172,15 @@
         <div class="menu-section">
             <h2>Γλυκά</h2>
             <div class="menu-item">
-                <img src="images2/Screenshot (7).png" alt="Main Dish 1">
+                <img src="images2/Screenshot (7).png" alt="Ντόνατ">
                 <div class="menu-item-details">
                     <div class="menu-item-name">Ντόνατ</div>
-                    <div class="menu-item-description">,Με γέμιση και επικαλύψη της γεύσης της επιλογής σας.</div>
+                    <div class="menu-item-description">Με γέμιση και επικαλύψη της γεύσης της επιλογής σας.</div>
                 </div>
                 <div class="menu-item-price">€4.00</div>
             </div>
             <div class="menu-item">
-                <img src="images2/Screenshot (10).png" alt="Main Dish 2">
+                <img src="images2/Screenshot (10).png" alt="Πάνκεικ">
                 <div class="menu-item-details">
                     <div class="menu-item-name">Πάνκεικ</div>
                     <div class="menu-item-description">Με σοκολάτα και μπισκότα.</div>
@@ -168,7 +188,7 @@
                 <div class="menu-item-price">€5.00</div>
             </div>
             <div class="menu-item">
-                <img src="images2/Screenshot (12).png" alt="Main Dish 2">
+                <img src="images2/Screenshot (12).png" alt="Μηλόπιτα">
                 <div class="menu-item-details">
                     <div class="menu-item-name">Μηλόπιτα</div>
                     <div class="menu-item-description">Κλασσική.</div>
@@ -179,7 +199,7 @@
         <div class="menu-section">
             <h2>Ποτά</h2>
             <div class="menu-item">
-                <img src="images2/SES-mojito-cocktail-recipe-759319-hero-01-038a050a144342b9aeea94d266d3527c.jpg" alt="Drink 1">
+                <img src="images2/SES-mojito-cocktail-recipe-759319-hero-01-038a050a144342b9aeea94d266d3527c.jpg" alt="Μοχίτο">
                 <div class="menu-item-details">
                     <div class="menu-item-name">Μοχίτο</div>
                     <div class="menu-item-description">Δροσιστικό κοκτέιλ με ρούμι, μέντα και λάιμ.</div>
@@ -187,7 +207,7 @@
                 <div class="menu-item-price">€7.00</div>
             </div>
             <div class="menu-item">
-                <img src="images2/aperol-spritz-cocktail-featured-500x500.jpg" alt="Drink 2">
+                <img src="images2/aperol-spritz-cocktail-featured-500x500.jpg" alt="'Άπερολ Σπριτς">
                 <div class="menu-item-details">
                     <div class="menu-item-name">'Άπερολ Σπριτς</div>
                     <div class="menu-item-description">Κοκτέιλ με Απεριτίφ, Prosecco και σόδα.</div>
@@ -195,14 +215,9 @@
                 <div class="menu-item-price">€8.00</div>
             </div>
             <div class="menu-item">
-                <img src="images2/argo-photo-11.jpg" alt="Drink 2">
+                <img src="images2/argo-photo-11.jpg" alt="'Mπύρα">
                 <div class="menu-item-details">
                     <div class="menu-item-name">'Mπύρα</div>
-                    <div class="menu-item-description">Kaiser, Heineken, Sol, Άλφα, Βεργίνα, Amstel, Radler, Μηλοκλέφτης, .</div>
+                    <div class="menu-item-description">Kaiser, Heineken, Sol, Άλφα, Βεργίνα, Amstel, Radler, Μηλοκλέφτης.</div>
                 </div>
-                <div class="menu-item-price">€3-4</div>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
+                <div class="
