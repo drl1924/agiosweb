@@ -28,6 +28,8 @@
         header img {
             max-width: 100%;
             height: auto;
+            display: block;
+            margin: 0 auto 10px;
         }
 
         main {
@@ -51,6 +53,7 @@
             margin-top: 0;
             color: #4CAF50;
             font-family: 'Times New Roman', Times, serif;
+            font-size: 24px;
         }
 
         .menu-item {
@@ -71,30 +74,34 @@
             max-width: 150px;
             height: auto;
             border-radius: 50%;
-            margin-right: 20px;
+            margin-bottom: 10px;
         }
 
         .menu-item-details {
             flex-grow: 1;
             text-align: left;
+            margin-left: 20px;
         }
 
         .menu-item-name {
             font-size: 18px;
             font-weight: bold;
+            margin-bottom: 5px;
         }
 
         .menu-item-description {
             font-size: 14px;
             color: #777;
+            margin-bottom: 5px;
         }
 
         .menu-item-price {
             font-size: 16px;
             color: #4CAF50;
+            font-weight: bold;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             .menu-item {
                 flex-direction: column;
                 align-items: center;
@@ -102,10 +109,11 @@
             }
 
             .menu-item img {
-                margin: 0 0 10px 0;
+                margin: 0 auto 10px;
             }
 
             .menu-item-details {
+                margin-left: 0;
                 margin-bottom: 10px;
             }
 
@@ -124,6 +132,28 @@
             .menu-section {
                 margin: 10px;
                 padding: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-section h2 {
+                font-size: 20px;
+            }
+
+            .menu-item-name {
+                font-size: 14px;
+            }
+
+            .menu-item-description {
+                font-size: 10px;
+            }
+
+            .menu-item-price {
+                font-size: 12px;
+            }
+
+            .menu-item img {
+                max-width: 120px;
             }
         }
     </style>
