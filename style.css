@@ -1,91 +1,51 @@
-/* Βασικά στυλ για τη σελίδα */
-body, html {
+*{
     margin: 0;
     padding: 0;
-    font-family: 'Playwrite BE VLG', sans-serif;
-    overflow-x: hidden;
+    font-family: "Playwrite BE VLG", cursive;
 }
 
-/* Στυλ για το banner section */
-#banner {
-    position: relative;
-    width: 100%;
+#banner{
+   
+    background: url(images2/Screenshot\ \(5\).png);
+    background-size: cover;
+    background-position: center;
     height: 100vh;
-    background: url(images2/Screenshot\ \(5\).png) no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
+ 
 
-#banner .logo {
+
+}
+.logo{
+    width: 50px;
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 100px;
+    top: 4%;
+    left: 5%;
 }
+.banner-text{
+    text-align: center;
+    color: rgb(53, 2, 2);
+    padding-top: 170px;
 
-#banner .banner-text {
-    color: white;
 }
+.banner-text h1{
+    font-size: 30px;
+    font-style: italic;
 
-#banner .banner-text h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
 }
-
-#banner .banner-text p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+.banner-text p{
+    font-size: 20px;
+    font-style:initial;
 }
+.banner-btn{ 
+    margin: 70px auto 0;
 
-#banner .banner-btn {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+
 }
-
-#banner .banner-btn a {
+.banner-btn a{
+    width: 250px;
     text-decoration: none;
-    color: white;
-    padding: 15px 25px; /* Αύξηση padding για καλύτερη αίσθηση */
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 1.2em;
-    font-weight: bold;
     display: inline-block;
-}
-
-#banner .banner-btn a:nth-child(1) {
-    background-color: #4CAF50; /* Πράσινο για το Menu */
-}
-
-#banner .banner-btn a:nth-child(2) {
-    background-color: #FF5722; /* Πορτοκαλί για το Contact */
-}
-
-#banner .banner-btn a:hover {
-    background-color: white;
-    color: black;
-}
-
-@media (min-width: 768px) {
-    #banner .banner-btn {
-        flex-direction: row;
-    }
-}
-
-@media (max-width: 768px) {
-    #banner .banner-text h1 {
-        font-size: 2em;
-    }
-
-    #banner .banner-text p {
-        font-size: 1em;
-    }
-
-    #banner .banner-btn a {
-        font-size: 1em;
-        padding: 10px;
-    }
+    margin: 0 20px;
+    padding: 20px 0;
+    color: rgb(0, 0, 0);
+    border: .5px solid #000000;
 }
